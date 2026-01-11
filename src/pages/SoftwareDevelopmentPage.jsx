@@ -57,9 +57,46 @@ const SoftwareDevelopmentPage = () => {
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Hero Section */}
       <section className="pt-40 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50"></div>
-        <div className="absolute top-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl"></div>
+        {/* Enhanced Multi-Layer Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50"></div>
+        
+        {/* Animated Gradient Orbs */}
+        <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-primary/30 via-blue-500/20 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }}></div>
+        <div className="absolute -bottom-40 -right-40 w-[550px] h-[550px] bg-gradient-to-tl from-blue-600/30 via-indigo-500/20 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s', animationDuration: '5s' }}></div>
+        
+        {/* Medium floating orbs */}
+        <div className="absolute top-1/4 right-1/4 w-[350px] h-[350px] bg-gradient-to-br from-cyan-400/25 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '0.5s', animationDuration: '6s' }}></div>
+        <div className="absolute bottom-1/3 left-1/3 w-[400px] h-[400px] bg-gradient-to-tr from-purple-400/20 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s', animationDuration: '5.5s' }}></div>
+        
+        {/* Small accent orbs */}
+        <div className="absolute top-1/2 left-1/4 w-[250px] h-[250px] bg-primary/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s', animationDuration: '4.5s' }}></div>
+        <div className="absolute top-1/3 right-1/3 w-[300px] h-[300px] bg-blue-500/15 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1.5s', animationDuration: '6.5s' }}></div>
+        
+        {/* Radial Gradient Mesh Overlays */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(24,119,242,0.15),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.12),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.10),transparent_50%)]"></div>
+
+        {/* Animated gradient sweep */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent animate-pulse" style={{ animationDuration: '8s' }}></div>
+
+        {/* Subtle Grid Pattern */}
+        <div className="absolute inset-0 opacity-[0.02]">
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="grid-pattern" width="64" height="64" patternUnits="userSpaceOnUse">
+                <path d="M 64 0 L 0 0 0 64" fill="none" stroke="rgb(24, 119, 242)" strokeWidth="1"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+          </svg>
+        </div>
+
+        {/* Diagonal light streaks */}
+        <div className="absolute inset-0 transform rotate-45 opacity-10">
+          <div className="absolute inset-y-0 left-1/4 w-1 bg-gradient-to-b from-transparent via-white to-transparent animate-pulse" style={{ animationDuration: '5s' }}></div>
+          <div className="absolute inset-y-0 right-1/4 w-1 bg-gradient-to-b from-transparent via-white to-transparent animate-pulse" style={{ animationDelay: '1.5s', animationDuration: '6s' }}></div>
+        </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
@@ -84,7 +121,7 @@ const SoftwareDevelopmentPage = () => {
               onClick={handleScheduleCall}
               className="bg-gradient-to-r from-primary to-blue-600 text-white font-bold px-8 py-4 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
             >
-              📞 Schedule a Call
+              ☎️ &nbsp; Schedule a Call
             </motion.button>
           </motion.div>
         </div>
@@ -298,7 +335,7 @@ const SoftwareDevelopmentPage = () => {
               onClick={handleScheduleCall}
               className="bg-gradient-to-r from-primary to-blue-600 text-white font-bold px-10 py-4 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
             >
-              📞 Schedule Your Development Consultation
+              ☎️ Schedule Your Development Consultation
             </motion.button>
           </motion.div>
         </div>

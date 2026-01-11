@@ -106,7 +106,7 @@ const RecruitmentPage = () => {
               onClick={handleScheduleCall}
               className="bg-gradient-to-r from-primary to-blue-600 text-white font-bold px-8 py-4 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
             >
-              📞 Schedule a Hiring Strategy Call
+              ☎️ &nbsp;  Schedule a Hiring Strategy Call
             </motion.button>
           </motion.div>
         </div>

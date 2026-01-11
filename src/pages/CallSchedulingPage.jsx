@@ -387,29 +387,6 @@ const CallSchedulingPage = () => {
         </div>
       </section>
 
-      {/* Trust Indicators */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">500+</div>
-              <div className="text-gray-600">Clients Served</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">1000+</div>
-              <div className="text-gray-600">Projects Done</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">10+</div>
-              <div className="text-gray-600">Years Experience</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-primary mb-2">24/7</div>
-              <div className="text-gray-600">Support Available</div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
