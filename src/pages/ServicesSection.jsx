@@ -31,24 +31,54 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/20 relative overflow-hidden">
-      {/* Background decoration */}
+    <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+      {/* Multi-layered Background with Depth */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50"></div>
+      
+      {/* Animated Background Patterns */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Large gradient orbs */}
-        <div className="absolute -top-40 -left-40 w-96 h-96 bg-gradient-to-br from-primary/20 via-blue-500/10 to-transparent rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-gradient-to-tl from-purple-600/20 via-blue-600/10 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        {/* Grid Pattern Overlay */}
+        <div className="absolute inset-0 opacity-[0.03]">
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="service-grid" width="60" height="60" patternUnits="userSpaceOnUse">
+                <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgb(24, 119, 242)" strokeWidth="1"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#service-grid)" />
+          </svg>
+        </div>
         
-        {/* Medium floating orbs */}
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-br from-cyan-500/10 to-transparent rounded-full blur-2xl"></div>
-        <div className="absolute bottom-1/3 left-1/3 w-72 h-72 bg-gradient-to-tr from-indigo-500/10 to-transparent rounded-full blur-2xl"></div>
+        {/* Large gradient orbs - Primary color theme with stronger presence */}
+        <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-primary/25 via-blue-500/20 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }}></div>
+        <div className="absolute -bottom-40 -right-40 w-[550px] h-[550px] bg-gradient-to-tl from-blue-600/25 via-indigo-500/20 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s', animationDuration: '5s' }}></div>
         
-        {/* Small accent orbs */}
-        <div className="absolute top-1/2 left-1/4 w-40 h-40 bg-primary/5 rounded-full blur-xl"></div>
-        <div className="absolute top-1/3 right-1/3 w-48 h-48 bg-purple-500/5 rounded-full blur-xl"></div>
+        {/* Medium floating orbs with movement */}
+        <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-blue-400/20 via-cyan-400/15 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '0.5s' }}></div>
+        <div className="absolute bottom-1/3 left-1/3 w-96 h-96 bg-gradient-to-tr from-indigo-400/20 via-blue-400/15 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDuration: '5.5s', animationDelay: '2s' }}></div>
         
-        {/* Gradient overlay mesh */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.08),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.08),transparent_50%)]"></div>
+        {/* Additional layered orbs for depth */}
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-br from-primary/15 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDuration: '7s', animationDelay: '1s' }}></div>
+        <div className="absolute bottom-1/2 left-1/2 w-72 h-72 bg-gradient-to-tl from-blue-500/15 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDuration: '6.5s', animationDelay: '0.3s' }}></div>
+        
+        {/* Radial gradient overlays - Stronger presence */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(24,119,242,0.12),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.08),transparent_60%)]"></div>
+        
+        {/* Animated gradient sweep */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent animate-pulse" style={{ animationDuration: '8s' }}></div>
+        
+        {/* Floating particles effect */}
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/30 rounded-full blur-sm animate-pulse" style={{ animationDuration: '3s' }}></div>
+        <div className="absolute top-3/4 right-1/4 w-3 h-3 bg-blue-500/30 rounded-full blur-sm animate-pulse" style={{ animationDuration: '4s', animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-3/4 w-2 h-2 bg-indigo-500/30 rounded-full blur-sm animate-pulse" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}></div>
+        
+        {/* Diagonal light streaks */}
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-1/4 -left-20 w-64 h-[2px] bg-gradient-to-r from-transparent via-primary/20 to-transparent rotate-45 blur-sm"></div>
+          <div className="absolute bottom-1/3 -right-20 w-72 h-[2px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent -rotate-45 blur-sm"></div>
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -66,14 +96,19 @@ const ServicesSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-600 to-purple-600">Services</span>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 relative">
+              Our{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-600 to-indigo-600 relative">
+                Services
+                {/* Subtle glow effect behind text */}
+                <span className="absolute inset-0 bg-gradient-to-r from-primary/20 to-blue-600/20 blur-xl -z-10"></span>
+              </span>
             </h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-primary via-blue-600 to-purple-600 mx-auto rounded-full"></div>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-primary via-blue-600 to-indigo-600 mx-auto rounded-full shadow-lg shadow-primary/30"></div>
           </motion.div>
           
           <motion.p 
-            className="mt-6 sm:mt-8 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="mt-6 sm:mt-8 text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-medium"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

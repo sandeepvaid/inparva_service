@@ -12,9 +12,9 @@ import Footer from './components/Footer';
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Header />
-        <FloatingContactButtons />
+    <div className="App">
+      <Header />
+      <FloatingContactButtons />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/recruitment" element={<RecruitmentPage />} />
@@ -23,8 +23,8 @@ function App() {
           <Route path="/software-development" element={<SoftwareDevelopmentPage />} />
           <Route path="/schedule-call" element={<CallSchedulingPage />} />
         </Routes>
-        <Footer />
-      </div>
+      <Footer />
+    </div>
     </Router>
   );
 }

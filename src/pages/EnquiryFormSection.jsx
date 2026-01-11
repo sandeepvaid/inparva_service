@@ -86,9 +86,9 @@ const EnquiryFormSection = () => {
 
     try {
       // EmailJS configuration
-      const serviceId = 'service_jjheqv5';
-      const templateId = 'template_2lzphxb';
-      const publicKey = 'FOjHaASn5PuP8rJ-8';
+      const serviceId = 'service_zj63v9a';
+      const templateId = 'template_am4tcih';
+      const publicKey = 'OK5-Zj_xRt7JT9Ofd';
 
       const templateParams = {
         from_name: formData.name,

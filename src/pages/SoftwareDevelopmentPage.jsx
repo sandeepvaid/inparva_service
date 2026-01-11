@@ -40,6 +40,7 @@ const SoftwareDevelopmentPage = () => {
     { name: 'React', icon: '⚛️' },
     { name: 'Node.js', icon: '🟢' },
     { name: 'Python', icon: '🐍' },
+    { name: 'Java', icon: '☕' },
     { name: 'JavaScript', icon: '📜' },
     { name: 'TypeScript', icon: '📘' },
     { name: 'APIs', icon: '🔌' },
@@ -55,10 +56,10 @@ const SoftwareDevelopmentPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-amber-50"></div>
-        <div className="absolute top-20 right-10 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl"></div>
+      <section className="pt-40 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50"></div>
+        <div className="absolute top-20 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
@@ -69,7 +70,7 @@ const SoftwareDevelopmentPage = () => {
           >
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
               Software That Supports <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-600 to-yellow-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
                 Your Business Goals.
               </span>
             </h1>
@@ -81,7 +82,7 @@ const SoftwareDevelopmentPage = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleScheduleCall}
-              className="bg-gradient-to-r from-orange-600 to-amber-600 text-white font-bold px-8 py-4 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+              className="bg-gradient-to-r from-primary to-blue-600 text-white font-bold px-8 py-4 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
             >
               📞 Schedule a Call
             </motion.button>
@@ -99,7 +100,7 @@ const SoftwareDevelopmentPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Our Software Development <span className="text-orange-600">Capabilities</span>
+              Our Software Development <span className="text-primary">Capabilities</span>
             </h2>
             <p className="text-xl text-gray-600">What We Can Help With</p>
           </motion.div>
@@ -115,8 +116,8 @@ const SoftwareDevelopmentPage = () => {
                 whileHover={{ y: -10, scale: 1.03 }}
                 className="group"
               >
-                <div className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-orange-300 h-full">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-600 to-amber-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
+                <div className="bg-gradient-to-br from-blue-50 via-blue-50 to-blue-100 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-primary h-full">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
@@ -138,7 +139,7 @@ const SoftwareDevelopmentPage = () => {
             className="text-center mb-12"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Technologies <span className="text-orange-600">We Work With</span>
+              Technologies <span className="text-primary">We Work With</span>
             </h2>
           </motion.div>
 
@@ -151,7 +152,7 @@ const SoftwareDevelopmentPage = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
                 whileHover={{ scale: 1.1, rotate: 5 }}
-                className="bg-white rounded-2xl px-6 py-4 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:border-orange-300"
+                className="bg-white rounded-2xl px-6 py-4 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:border-primary"
               >
                 <div className="flex items-center space-x-3">
                   <span className="text-3xl">{tech.icon}</span>
@@ -173,7 +174,7 @@ const SoftwareDevelopmentPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              <span className="text-orange-600">Ideal For:</span>
+              <span className="text-primary">Ideal For:</span>
             </h2>
           </motion.div>
 
@@ -187,7 +188,7 @@ const SoftwareDevelopmentPage = () => {
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="bg-gradient-to-br from-orange-100 to-amber-100 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 text-4xl shadow-lg">
+                <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6 text-4xl shadow-lg">
                   {item.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
@@ -199,7 +200,7 @@ const SoftwareDevelopmentPage = () => {
       </section>
 
       {/* Approach Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-600 via-amber-600 to-yellow-600">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary to-blue-600">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -265,11 +266,11 @@ const SoftwareDevelopmentPage = () => {
                 transition={{ delay: index * 0.1 }}
                 className="relative"
               >
-                <div className="text-6xl font-bold text-orange-100 mb-4">{step.num}</div>
+                <div className="text-6xl font-bold text-blue-100 mb-4">{step.num}</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
                 <p className="text-gray-600">{step.desc}</p>
                 {index < 3 && (
-                  <div className="hidden md:block absolute top-8 -right-4 text-3xl text-orange-300">→</div>
+                  <div className="hidden md:block absolute top-8 -right-4 text-3xl text-blue-300">→</div>
                 )}
               </motion.div>
             ))}
@@ -286,7 +287,7 @@ const SoftwareDevelopmentPage = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Have a <span className="text-orange-600">Project in Mind?</span>
+              Have a <span className="text-primary">Project in Mind?</span>
             </h2>
             <p className="text-xl text-gray-600 mb-8">
               Let's discuss your requirements and determine the right approach.
@@ -295,7 +296,7 @@ const SoftwareDevelopmentPage = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleScheduleCall}
-              className="bg-gradient-to-r from-orange-600 to-amber-600 text-white font-bold px-10 py-4 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+              className="bg-gradient-to-r from-primary to-blue-600 text-white font-bold px-10 py-4 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
             >
               📞 Schedule Your Development Consultation
             </motion.button>

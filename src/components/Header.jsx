@@ -24,10 +24,10 @@ const Header = () => {
   const navigate = useNavigate();
 
   const services = [
-    { name: 'AI-Driven Recruitment & Staffing', href: '/recruitment', icon: '🤖' },
-    { name: 'Virtual Assistant Services', href: '/virtual-assistant', icon: '💻' },
-    { name: 'Data Analytics & Insights', href: '/data-analytics', icon: '📊' },
-    { name: 'Software Development Solutions', href: '/software-development', icon: '⚙️' },
+    { name: 'AI-Driven Recruitment & Staffing', href: '/recruitment' },
+    { name: 'Virtual Assistant Services', href: '/virtual-assistant' },
+    { name: 'Data Analytics & Insights', href: '/data-analytics' },
+    { name: 'Software Development Solutions', href: '/software-development' },
   ];
 
   const handleServiceClick = (href) => {
@@ -65,16 +65,16 @@ const Header = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="text-xl sm:text-2xl font-bold cursor-pointer hover:opacity-80 transition-opacity">
+            <div className="text-xl md:text-4xl font-bold cursor-pointer hover:opacity-80 transition-opacity">
               <span className="text-primary">Inprava</span>
             </div>
           </Link>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-14">
             <Link
               to="/"
-              className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
+              className="text-gray-700 hover:text-primary transition-colors duration-200 font-bold text-lg"
             >
               Home
             </Link>
@@ -86,10 +86,10 @@ const Header = () => {
               onMouseLeave={handleServicesMouseLeave}
             >
               <button
-                className="flex items-center gap-1 text-gray-700 hover:text-primary transition-colors duration-200 font-medium py-2"
+                className="flex items-center gap-1 text-gray-700 hover:text-primary transition-colors duration-200 font-bold text-lg py-2"
               >
                 Services
-                <HiChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
+                <HiChevronDown className={`w-5 h-5 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
               
               {/* Dropdown Menu */}
@@ -100,10 +100,9 @@ const Header = () => {
                       <button
                         key={service.name}
                         onClick={() => handleServiceClick(service.href)}
-                        className="w-full text-left flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-primary hover:text-white transition-all duration-200 group"
+                        className="w-full text-left px-4 py-3 text-gray-700 hover:bg-primary hover:text-white transition-all duration-200"
                       >
-                        <span className="text-2xl group-hover:scale-110 transition-transform duration-200">{service.icon}</span>
-                        <span className="text-sm font-medium">{service.name}</span>
+                        <span className="text-base font-semibold">{service.name}</span>
                       </button>
                     ))}
                   </div>
@@ -112,14 +111,8 @@ const Header = () => {
             </div>
 
             <a
-              href="#career"
-              className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
-            >
-              Career
-            </a>
-            <a
               href="#enquiry-form"
-              className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
+              className="text-gray-700 hover:text-primary transition-colors duration-200 font-bold text-lg"
             >
               Contact
             </a>
@@ -144,7 +137,7 @@ const Header = () => {
             <div className="flex flex-col space-y-4 pt-4">
               <Link
                 to="/"
-                className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
+                className="text-gray-700 hover:text-primary transition-colors duration-200 font-bold text-lg"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Home
@@ -153,11 +146,11 @@ const Header = () => {
               {/* Mobile Services Dropdown */}
               <div>
                 <button
-                  className="flex items-center justify-between w-full text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
+                  className="flex items-center justify-between w-full text-gray-700 hover:text-primary transition-colors duration-200 font-bold text-lg"
                   onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
                 >
                   Services
-                  <HiChevronDown className={`w-4 h-4 transition-transform duration-200 ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
+                  <HiChevronDown className={`w-5 h-5 transition-transform duration-200 ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 
                 {isMobileServicesOpen && (
@@ -166,10 +159,9 @@ const Header = () => {
                       <button
                         key={service.name}
                         onClick={() => handleServiceClick(service.href)}
-                        className="w-full text-left flex items-center gap-3 text-gray-600 hover:text-primary transition-colors duration-200 py-2"
+                        className="w-full text-left text-gray-600 hover:text-primary transition-colors duration-200 py-2 font-semibold"
                       >
-                        <span className="text-xl">{service.icon}</span>
-                        <span className="text-sm">{service.name}</span>
+                        <span className="text-base">{service.name}</span>
                       </button>
                     ))}
                   </div>
@@ -177,15 +169,8 @@ const Header = () => {
               </div>
 
               <a
-                href="#career"
-                className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Career
-              </a>
-              <a
                 href="#enquiry-form"
-                className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
+                className="text-gray-700 hover:text-primary transition-colors duration-200 font-bold text-lg"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact

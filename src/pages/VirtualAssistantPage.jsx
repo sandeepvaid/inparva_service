@@ -38,8 +38,8 @@ const VirtualAssistantPage = () => {
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Hero Section with Form */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-blue-50"></div>
-        <div className="absolute top-20 right-10 w-72 h-72 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50"></div>
+        <div className="absolute top-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
@@ -52,7 +52,7 @@ const VirtualAssistantPage = () => {
             >
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                 Delegate Smarter.{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-blue-600 to-primary">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
                   Operate Faster.
                 </span>
                 <br />Focus on What Matters.
@@ -72,7 +72,7 @@ const VirtualAssistantPage = () => {
                     transition={{ delay: 0.3 + index * 0.1 }}
                     className="flex items-center space-x-3"
                   >
-                    <div className="w-6 h-6 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 bg-gradient-to-br from-primary to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                       <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
@@ -119,7 +119,7 @@ const VirtualAssistantPage = () => {
                 onClick={handleScheduleCall}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                className="w-full bg-gradient-to-r from-primary to-blue-600 text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 📅 Schedule Your Call Now
               </motion.button>
@@ -138,10 +138,10 @@ const VirtualAssistantPage = () => {
             className="text-center mb-12"
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Virtual Assistants</span> Can Do
+              What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Virtual Assistants</span> Can Do
             </h2>
-            <p className="text-xl text-gray-600 italic">
-              "Can Your Work Be Done With Just a Computer? If Yes, Then You Can Hire A VA"
+            <p className="text-xl text-gray-600">
+              Any process that can be handled digitally can be delegated to our trained virtual assistants—freeing your team to focus on higher-impact work.
             </p>
           </motion.div>
 
@@ -154,7 +154,7 @@ const VirtualAssistantPage = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
                 whileHover={{ y: -5, scale: 1.05 }}
-                className="bg-gradient-to-br from-purple-50 via-blue-50 to-white rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100"
+                className="bg-gradient-to-br from-blue-50 via-blue-50 to-white rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 <div className="text-4xl mb-3">{service.icon}</div>
                 <h3 className="font-bold text-gray-900 mb-2 text-sm">{service.title}</h3>
@@ -175,7 +175,7 @@ const VirtualAssistantPage = () => {
             className="text-center mb-12"
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Built for <span className="text-purple-600">Reliability</span>, Not Just Cost Savings
+              Built for <span className="text-primary">Reliability</span>, Not Just Cost Savings
             </h2>
           </motion.div>
 
@@ -189,7 +189,7 @@ const VirtualAssistantPage = () => {
                 transition={{ delay: index * 0.1 }}
                 className="flex items-start space-x-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary to-blue-600 rounded-xl flex items-center justify-center">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
@@ -202,7 +202,7 @@ const VirtualAssistantPage = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-600 to-blue-600 text-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary to-blue-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -219,7 +219,7 @@ const VirtualAssistantPage = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleScheduleCall}
-              className="bg-white text-purple-600 font-bold px-10 py-4 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+              className="bg-white text-primary font-bold px-10 py-4 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
             >
               📞 Schedule a Call
             </motion.button>

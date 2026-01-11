@@ -131,9 +131,9 @@ const CallSchedulingPage = () => {
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Hero Section */}
       <section className="pt-32 pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-blue-50 to-blue-100"></div>
         <div className="absolute top-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl"></div>
         
         <div className="max-w-4xl mx-auto relative z-10 text-center">
           <motion.div
@@ -143,7 +143,7 @@ const CallSchedulingPage = () => {
           >
             <div className="text-6xl mb-6">📞</div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Schedule a <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-600 to-pink-600">Strategy Call</span>
+              Schedule a <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">Strategy Call</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
               Let's discuss how Inprava can help transform your business. Book a consultation with our experts.
@@ -153,7 +153,7 @@ const CallSchedulingPage = () => {
       </section>
 
       {/* Benefits Bar */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-purple-600">
+      <section className="py-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-blue-600">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-white text-center">
             <div>
@@ -362,7 +362,7 @@ const CallSchedulingPage = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full bg-gradient-to-r from-primary via-purple-600 to-pink-600 text-white font-bold py-4 px-8 rounded-lg 
+                className={`w-full bg-gradient-to-r from-primary to-blue-600 text-white font-bold py-4 px-8 rounded-lg 
                   transition-all duration-300 transform hover:scale-105 hover:shadow-xl
                   ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
               >

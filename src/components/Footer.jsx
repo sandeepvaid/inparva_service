@@ -36,7 +36,7 @@ const Footer = () => {
               <Link to="/">
                 <h2 className="text-2xl font-bold text-white hover:text-primary transition-colors duration-300 cursor-pointer">
                   Inprava
-                </h2>
+              </h2>
               </Link>
             </div>
 
@@ -74,14 +74,14 @@ const Footer = () => {
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   {link.href.startsWith('/#') ? (
-                    <a
-                      href={link.href}
-                      className="text-gray-400 hover:text-primary transition-colors duration-200 
-                        text-sm flex items-center group"
-                    >
-                      <span className="w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-4 mr-0 group-hover:mr-2"></span>
-                      {link.name}
-                    </a>
+                  <a
+                    href={link.href}
+                    className="text-gray-400 hover:text-primary transition-colors duration-200 
+                      text-sm flex items-center group"
+                  >
+                    <span className="w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-4 mr-0 group-hover:mr-2"></span>
+                    {link.name}
+                  </a>
                   ) : (
                     <Link
                       to={link.href}
@@ -134,8 +134,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 group">
                 <HiMail className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform duration-200" />
-                <a href="mailto:info@inprava.com" className="text-gray-400 hover:text-primary text-sm transition-colors duration-200">
-                  info@inprava.com
+                <a href="mailto:contact@inprava.com" className="text-gray-400 hover:text-primary text-sm transition-colors duration-200">
+                  contact@inprava.com
                 </a>
               </li>
             </ul>

@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
+import aiHeadImage from '../assets/images/Gemini_Generated_Image_k8aii0k8aii0k8ai-removebg-preview.png';
 
+// import aiHeadImage from '../assets/images/v1.png';
 const HeroSection = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const rotatingTexts = [
@@ -25,16 +27,17 @@ const HeroSection = () => {
     }
   };
 
+  
   return (
     <section id="home" className="pt-20 sm:pt-24 pb-12 sm:pb-16 bg-gradient-to-br from-blue-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Content */}
           <div className="space-y-4 sm:space-y-6 text-center md:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Growth doesn't wait.{' '}
-              <span className="text-primary">Neither do we.</span>
-            </h1>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight text-gray-900 leading-tight">
+            Intelligence of <span className="text-primary">AI</span>{' '}
+             <br /> The Power of <span className="text-primary">People</span><br /> The <span className="text-primary">Inprava Way</span> 
+            </h2>
             
             {/* Subheader with rotating text */}
             <div className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800">
@@ -58,9 +61,9 @@ const HeroSection = () => {
                 ))}
               </div>
             </div>
-
+            
             <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
-              Inprava delivers end-to-end business solutions with 24/7 support, helping companies hire smarter, streamline operations, and scale with confidence.
+            We leverage AI tools to enhance efficiency across Recruitment, Virtual Support, Data Analytics, and Software Engineering—helping businesses move faster and work smarter
             </p>
 
             <div className="pt-2 sm:pt-4">
@@ -71,22 +74,6 @@ const HeroSection = () => {
               >
                 Get Started Now
               </button>
-            </div>
-
-            {/* Key Stats */}
-            <div className="pt-6 sm:pt-8 grid grid-cols-3 gap-3 sm:gap-4">
-              <div>
-                <div className="text-2xl sm:text-3xl font-bold text-primary">500+</div>
-                <div className="text-xs sm:text-sm text-gray-600">Clients Served</div>
-              </div>
-              <div>
-                <div className="text-2xl sm:text-3xl font-bold text-primary">1000+</div>
-                <div className="text-xs sm:text-sm text-gray-600">Projects Done</div>
-              </div>
-              <div>
-                <div className="text-2xl sm:text-3xl font-bold text-primary">10+</div>
-                <div className="text-xs sm:text-sm text-gray-600">Years Experience</div>
-              </div>
             </div>
           </div>
 
@@ -119,7 +106,7 @@ const HeroSection = () => {
               {/* Main Hero Image */}
               <div className="relative z-10 flex items-center justify-center h-full">
                 <img 
-                  src="https://www.cynetsystems.com/wp-content/uploads/2024/10/new-home-img-759x1024.webp"
+                  src={aiHeadImage}
                   alt="AI Technology Solutions"
                   className="w-full h-full object-contain drop-shadow-2xl"
                 />
@@ -130,7 +117,7 @@ const HeroSection = () => {
                 {/* Top Left */}
                 <div className="absolute top-4 sm:top-8 left-0 bg-white rounded-full px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 shadow-lg 
                   animate-float border-2 border-primary/20">
-                  <span className="text-xs sm:text-sm font-semibold text-primary">AI Powered</span>
+                  <span className="text-xs sm:text-sm font-semibold text-primary">Data Analytics</span>
                 </div>
 
                 {/* Top Right */}
@@ -139,40 +126,20 @@ const HeroSection = () => {
                   <span className="text-xs sm:text-sm font-semibold text-white">Hiring solutions</span>
                 </div>
 
-                {/* Middle Left */}
-                <div className="absolute top-1/3 -left-2 sm:-left-4 bg-white rounded-full px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 shadow-lg 
-                  animate-float border-2 border-blue-500/20">
-                  <span className="text-xs sm:text-sm font-semibold text-gray-800">Cloud Solutions</span>
-                </div>
-
-                {/* Middle Right */}
-                <div className="absolute top-1/3 -right-2 sm:-right-4 bg-gradient-to-r from-blue-500 to-primary 
-                  rounded-full px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 shadow-lg animate-float-delayed">
-                  <span className="text-xs sm:text-sm font-semibold text-white">Data Analytics</span>
-                </div>
 
                 {/* Bottom Left */}
                 <div className="absolute bottom-24 sm:bottom-32 left-2 sm:left-4 bg-white rounded-full px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 shadow-lg 
                   animate-float border-2 border-primary/20">
-                  <span className="text-xs sm:text-sm font-semibold text-primary">Automation</span>
+                  <span className="text-xs sm:text-sm font-semibold text-primary">Virtual Assistant</span>
                 </div>
 
                 {/* Bottom Right */}
                 <div className="absolute bottom-16 sm:bottom-24 right-0 bg-gradient-to-r from-primary to-blue-600 
                   rounded-full px-2 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 shadow-lg animate-float-delayed">
-                  <span className="text-xs sm:text-sm font-semibold text-white">Innovation</span>
+                  <span className="text-xs sm:text-sm font-semibold text-white">Development</span>
                 </div>
 
-                {/* Extra Keywords - Hidden on Mobile */}
-                <div className="hidden sm:block absolute bottom-36 md:bottom-48 left-4 md:left-8 bg-white rounded-full px-3 md:px-4 py-1.5 md:py-2 shadow-lg 
-                  animate-float border-2 border-blue-500/20">
-                  <span className="text-xs sm:text-sm font-semibold text-gray-800">Digital Transform</span>
-                </div>
 
-                <div className="hidden sm:block absolute top-1/2 right-4 md:right-8 bg-gradient-to-r from-blue-500 to-primary 
-                  rounded-full px-2 md:px-3 py-1 md:py-1.5 shadow-lg animate-float">
-                  <span className="text-xs font-semibold text-white">Smart Tech</span>
-                </div>
               </div>
 
               {/* Background Glow Effects */}

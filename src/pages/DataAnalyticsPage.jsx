@@ -54,10 +54,31 @@ const DataAnalyticsPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-cyan-50"></div>
-        <div className="absolute top-20 left-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
+      <section className="pt-40 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Animated Background Gradients */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-indigo-50"></div>
+        
+        {/* Animated Background Patterns */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Large animated gradient orbs */}
+          <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-primary/20 via-blue-500/15 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }}></div>
+          <div className="absolute -bottom-40 -right-40 w-[550px] h-[550px] bg-gradient-to-tl from-blue-600/20 via-indigo-500/15 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s', animationDuration: '5s' }}></div>
+          
+          {/* Medium floating orbs */}
+          <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-blue-400/15 via-cyan-400/10 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '0.5s' }}></div>
+          <div className="absolute bottom-1/3 left-1/3 w-96 h-96 bg-gradient-to-tr from-indigo-400/15 via-blue-400/10 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDuration: '5.5s', animationDelay: '2s' }}></div>
+          
+          {/* Small accent orbs */}
+          <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-br from-primary/12 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDuration: '7s', animationDelay: '1s' }}></div>
+          <div className="absolute bottom-1/2 left-1/2 w-72 h-72 bg-gradient-to-tl from-blue-500/12 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDuration: '6.5s', animationDelay: '0.3s' }}></div>
+          
+          {/* Radial gradient overlays */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(24,119,242,0.12),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+          
+          {/* Animated gradient sweep */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent animate-pulse" style={{ animationDuration: '8s' }}></div>
+        </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
@@ -68,7 +89,7 @@ const DataAnalyticsPage = () => {
           >
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
               Make Confident Decisions <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
                 With Data You Can Trust.
               </span>
             </h1>
@@ -80,7 +101,7 @@ const DataAnalyticsPage = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleScheduleCall}
-              className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold px-8 py-4 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+              className="bg-gradient-to-r from-primary to-blue-600 text-white font-bold px-8 py-4 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
             >
               👉 Schedule a Call
             </motion.button>
@@ -89,7 +110,7 @@ const DataAnalyticsPage = () => {
       </section>
 
       {/* Value-Add Banner */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-emerald-600 to-teal-600">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary to-blue-600">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -122,7 +143,7 @@ const DataAnalyticsPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              End-to-End <span className="text-emerald-600">Analytics Support</span>
+              End-to-End <span className="text-primary">Analytics Support</span>
             </h2>
             <p className="text-xl text-gray-600">Our services include:</p>
           </motion.div>
@@ -138,8 +159,8 @@ const DataAnalyticsPage = () => {
                 whileHover={{ y: -10, scale: 1.03 }}
                 className="group"
               >
-                <div className="bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-emerald-300 h-full">
-                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="bg-gradient-to-br from-blue-50 via-blue-50 to-blue-100 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-primary h-full">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
@@ -161,7 +182,7 @@ const DataAnalyticsPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Analytics Built for <span className="text-emerald-600">Decision-Makers</span>
+              Analytics Built for <span className="text-primary">Decision-Makers</span>
             </h2>
           </motion.div>
 
@@ -176,7 +197,7 @@ const DataAnalyticsPage = () => {
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-xl flex items-center justify-center text-2xl">
+                  <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center text-2xl">
                     {benefit.icon}
                   </div>
                   <div>
@@ -197,7 +218,7 @@ const DataAnalyticsPage = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 rounded-3xl p-12 text-white text-center shadow-2xl"
+            className="bg-gradient-to-br from-primary to-blue-600 rounded-3xl p-12 text-white text-center shadow-2xl"
           >
             <div className="text-6xl mb-6">📊</div>
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -234,7 +255,7 @@ const DataAnalyticsPage = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Ready to Make <span className="text-emerald-600">Data-Driven Decisions?</span>
+              Ready to Make <span className="text-primary">Data-Driven Decisions?</span>
             </h2>
             <p className="text-xl text-gray-600 mb-8">
               Let's discuss how we can turn your data into your competitive advantage.
@@ -243,7 +264,7 @@ const DataAnalyticsPage = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleScheduleCall}
-              className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold px-10 py-4 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+              className="bg-gradient-to-r from-primary to-blue-600 text-white font-bold px-10 py-4 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
             >
               📞 Schedule Your Analytics Consultation
             </motion.button>
