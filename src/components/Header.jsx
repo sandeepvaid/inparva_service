@@ -110,12 +110,12 @@ const Header = () => {
               )}
             </div>
 
-            <a
-              href="#enquiry-form"
+            <Link
+              to="/schedule-call"
               className="text-gray-700 hover:text-primary transition-colors duration-200 font-bold text-lg"
             >
               Contact
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -168,13 +168,13 @@ const Header = () => {
                 )}
               </div>
 
-              <a
-                href="#enquiry-form"
+              <Link
+                to="/schedule-call"
                 className="text-gray-700 hover:text-primary transition-colors duration-200 font-bold text-lg"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
         )}
