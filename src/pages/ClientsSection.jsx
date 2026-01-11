@@ -141,7 +141,7 @@ const ClientsSection = () => {
             <>
               {/* Moving Carousel - First Row */}
               <div className="relative overflow-hidden py-8 mb-4">
-                <div className="flex animate-scroll gap-8 items-center">
+                <div className="flex animate-scroll gap-8 items-center" style={{ '--animation-duration': '10s', '--animation-direction': 'forwards' }}>
                   {/* Duplicate logos for seamless loop */}
                   {[...clientLogos.slice(0, 12), ...clientLogos.slice(0, 12)].map((client, index) => (
                     <div
@@ -160,7 +160,7 @@ const ClientsSection = () => {
 
               {/* Moving Carousel - Second Row (Reverse) */}
               <div className="relative overflow-hidden py-8 mb-8">
-                <div className="flex animate-scroll gap-8 items-center" style={{ animationDirection: 'reverse' }}>
+                <div className="flex animate-scroll gap-8 items-center" style={{ '--animation-duration': '10s', '--animation-direction': 'reverse' }}>
                   {/* Duplicate logos for seamless loop */}
                   {[...clientLogos.slice(12, 24), ...clientLogos.slice(12, 24)].map((client, index) => (
                     <div
