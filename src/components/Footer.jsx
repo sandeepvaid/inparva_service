@@ -1,14 +1,20 @@
 import { FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 import { HiMail, HiPhone } from 'react-icons/hi';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
   const currentYear = new Date().getFullYear();
+
+  const handleHomeClick = () => {
+    navigate('/');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const quickLinks = [
     { name: 'Home', href: '/' },
     { name: 'Schedule a Call', href: '/schedule-call' },
-    { name: 'Contact', href: '/#enquiry-form' },
+    { name: 'Contact', href: '/schedule-call' },
   ];
 
   const services = [
@@ -33,10 +39,10 @@ const Footer = () => {
           <div className="lg:col-span-1">
             {/* Logo */}
             <div className="mb-4">
-              <Link to="/">
+              <Link to="/" onClick={handleHomeClick}>
                 <h2 className="text-2xl font-bold text-white hover:text-primary transition-colors duration-300 cursor-pointer">
                   Inprava
-              </h2>
+                </h2>
               </Link>
             </div>
 
@@ -85,6 +91,7 @@ const Footer = () => {
                   ) : (
                     <Link
                       to={link.href}
+                      onClick={link.href === '/' ? handleHomeClick : undefined}
                       className="text-gray-400 hover:text-primary transition-colors duration-200 
                         text-sm flex items-center group"
                     >
@@ -149,21 +156,10 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             {/* Copyright */}
             <p className="text-gray-500 text-sm text-center sm:text-left">
-              © {currentYear} <span className="text-primary font-semibold">Inprava</span>. All rights reserved.
+              © {currentYear} <Link to="/" onClick={handleHomeClick} className="text-primary font-semibold hover:text-blue-400 transition-colors duration-200 cursor-pointer">Inprava</Link>. All rights reserved.
             </p>
 
-            {/* Crafted By */}
-            <p className="text-gray-500 text-sm">
-              Designed & Developed by{' '}
-              <a 
-                href="https://www.linkedin.com/in/sandeep-vaid623/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-primary hover:text-blue-400 font-semibold transition-colors duration-200"
-              >
-                Sandeep
-              </a>
-            </p>
+           
           </div>
         </div>
       </div>

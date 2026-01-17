@@ -19,7 +19,7 @@ const FloatingContactButtons = () => {
     {
       icon: FaEnvelope,
       label: 'Email',
-      link: 'mailto:info@example.com', // Replace with actual email
+      link: 'mailto:contact@inprava.com', // Replace with actual email
       bgColor: 'bg-primary',
       hoverColor: 'hover:bg-blue-700',
     },

@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import aiHeadImage from '../assets/images/Gemini_Generated_Image_k8aii0k8aii0k8ai-removebg-preview.png';
 
 // import aiHeadImage from '../assets/images/v1.png';
 const HeroSection = () => {
+  const navigate = useNavigate();
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const rotatingTexts = [
     'AI-driven recruitment',
@@ -20,11 +22,8 @@ const HeroSection = () => {
   }, []);
 
   const handleGetStarted = () => {
-    // Scroll to enquiry form when implemented
-    const form = document.getElementById('enquiry-form');
-    if (form) {
-      form.scrollIntoView({ behavior: 'smooth' });
-    }
+    navigate('/schedule-call');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   
@@ -35,7 +34,7 @@ const HeroSection = () => {
           {/* Left Side - Content */}
           <div className="space-y-4 sm:space-y-6 text-center md:text-left">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight text-gray-900 leading-tight">
-            Intelligence of <span className="text-primary">AI</span>{' '}
+              The Potential of  <span className="text-primary">AI</span>{' '}
              <br /> The Power of <span className="text-primary">People</span><br /> The <span className="text-primary">Inprava Way</span> 
             </h2>
             
@@ -108,7 +107,7 @@ const HeroSection = () => {
                 <img 
                   src={aiHeadImage}
                   alt="AI Technology Solutions"
-                  className="w-full h-full object-contain drop-shadow-2xl"
+                  className="w-full h-full object-contain drop-shadow-2xl animate-float-up-down"
                 />
               </div>
 

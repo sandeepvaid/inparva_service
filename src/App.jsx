@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import Header from './components/Header';
 import Home from './pages/Home';
 import RecruitmentPage from './pages/RecruitmentPage';
@@ -9,10 +10,22 @@ import CallSchedulingPage from './pages/CallSchedulingPage';
 import FloatingContactButtons from './components/FloatingContactButtons';
 import Footer from './components/Footer';
 
+// Component to scroll to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <Router>
     <div className="App">
+      <ScrollToTop />
       <Header />
       <FloatingContactButtons />
         <Routes>

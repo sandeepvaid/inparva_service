@@ -38,6 +38,12 @@ const Header = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleHomeClick = () => {
+    navigate('/');
+    setIsMobileMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const handleServicesMouseEnter = () => {
     if (closeTimeout) {
       clearTimeout(closeTimeout);
@@ -64,7 +70,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" onClick={handleHomeClick} className="flex items-center">
             <div className="text-xl md:text-4xl font-bold cursor-pointer hover:opacity-80 transition-opacity">
               <span className="text-primary">Inprava</span>
             </div>
@@ -74,6 +80,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-14">
             <Link
               to="/"
+              onClick={handleHomeClick}
               className="text-gray-700 hover:text-primary transition-colors duration-200 font-bold text-lg"
             >
               Home
@@ -137,8 +144,8 @@ const Header = () => {
             <div className="flex flex-col space-y-4 pt-4">
               <Link
                 to="/"
+                onClick={handleHomeClick}
                 className="text-gray-700 hover:text-primary transition-colors duration-200 font-bold text-lg"
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Home
               </Link>
