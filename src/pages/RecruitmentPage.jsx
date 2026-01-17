@@ -59,10 +59,6 @@ const RecruitmentPage = () => {
   const handleScheduleCall = () => {
     window.location.href = 'tel:+1234567890';
   };
-  const handleScheduleTalk = () => {
-   navigate('/schedule-call');
-   window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
 
   return (
@@ -336,14 +332,7 @@ const RecruitmentPage = () => {
               >
                 📞 Schedule a Call
               </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={handleScheduleTalk}
-                className="bg-white text-primary border-2 border-primary font-bold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                💬 Talk to an Recruitment Expert
-              </motion.button>
+              
             </div>
           </motion.div>
         </div>

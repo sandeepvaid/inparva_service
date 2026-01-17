@@ -11,10 +11,14 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleScheduleCallClick = () => {
+    navigate('/schedule-call');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const quickLinks = [
     { name: 'Home', href: '/' },
     { name: 'Schedule a Call', href: '/schedule-call' },
-    { name: 'Contact', href: '/schedule-call' },
   ];
 
   const services = [
@@ -91,7 +95,7 @@ const Footer = () => {
                   ) : (
                     <Link
                       to={link.href}
-                      onClick={link.href === '/' ? handleHomeClick : undefined}
+                      onClick={link.href === '/' ? handleHomeClick : link.href === '/schedule-call' ? handleScheduleCallClick : undefined}
                       className="text-gray-400 hover:text-primary transition-colors duration-200 
                         text-sm flex items-center group"
                     >
