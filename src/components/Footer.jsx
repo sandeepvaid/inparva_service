@@ -1,5 +1,5 @@
 import { FaTwitter, FaLinkedinIn } from 'react-icons/fa';
-import { HiMail, HiPhone } from 'react-icons/hi';
+import { HiMail, HiPhone, HiLocationMarker } from 'react-icons/hi';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Footer = () => {
@@ -148,6 +148,15 @@ const Footer = () => {
                 <a href="mailto:contact@inprava.com" className="text-gray-400 hover:text-primary text-sm transition-colors duration-200">
                   contact@inprava.com
                 </a>
+              </li>
+              <li className="flex items-start gap-3 group">
+                <HiLocationMarker className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform duration-200 mt-0.5" />
+                <div className="text-gray-400 text-sm">
+                  <div className="font-semibold text-gray-300 mb-1">USA Office</div>
+                  <div>339B, Gaines mill rd, Springfield, IL, 62704</div>
+                  <div className="font-semibold text-gray-300 mt-3 mb-1">India Office</div>
+                  <div>Sector 62, Noida</div>
+                </div>
               </li>
             </ul>
           </div>
