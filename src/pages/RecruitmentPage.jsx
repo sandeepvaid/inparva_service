@@ -55,7 +55,7 @@ const RecruitmentPage = () => {
   ];
 
   const handleScheduleCall = () => {
-    window.location.href = 'tel:+1234567890';
+    window.location.href = 'tel:+14474420450';
   };
 
 

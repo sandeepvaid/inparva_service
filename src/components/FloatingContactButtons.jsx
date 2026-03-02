@@ -12,7 +12,7 @@ const FloatingContactButtons = () => {
     {
       icon: FaPhone,
       label: 'Call Us',
-      link: 'tel:+1234567890', // Replace with actual number
+      link: 'tel:+14474420450', // Replace with actual number
       bgColor: 'bg-blue-500',
       hoverColor: 'hover:bg-blue-600',
     },
